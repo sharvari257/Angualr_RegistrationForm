@@ -1,0 +1,136 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+
+input.ng-invalid {
+    border-left: 3px solid red;
+}
+
+input.ng-valid {
+    border-left: 3px solid green;
+}
+.error {
+    color: red;
+}
+
+.btn-primary {
+    padding: 10.5px;
+    width: 300.5px;
+    font-size: large;
+    border-radius: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px
+    
+}
+
+
+.login-box{
+    border-color: #00004d;
+    border-style:ridge;
+    position: absolute;
+    top: -15%;
+    left: 9%;
+    transform: translate(70%, 30%);
+    z-index: 999;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    padding: 50px 55px 55px 55px;
+    border-radius: 70px;
+    /**background: rgba(255, 255, 255, 0.04);**/
+    background-image: url(https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTkxfHxibGFjayUyMHBlbmNpbHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-color: #1a1a1a;
+    box-shadow: -3px 6px 30px 2px rgba(0, 0, 0, 0.75);
+    height: 85%;
+    border-radius: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px
+
+}
+
+.logo {
+    background:url("src/assets/bg.png");
+    background-size: cover;
+    transform: translate(65%, -90%);
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    border-radius: 45%;
+    margin:0 auto;
+   
+}
+
+.login-box header{
+    color: whitesmoke;
+    transform: translate(4%, -25%);
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 80px;
+    margin: 38px 80px -30px 48px;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: double #e60000;
+}
+
+/**.bg-img:after {
+    position: absolute;
+    content: ' ';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}**/
+
+.bg-img {
+    /** background: url("src/assets/bg.png")  no-repeat;**/
+    background: url(https://i.pinimg.com/originals/de/d9/bf/ded9bfd8480627cb23133403b01241ed.png) no-repeat;
+     margin-right: auto;
+     height: 100vh;
+     background-size: cover;
+     background-position: center;
+}
+.field{
+    padding: 20px;
+    position: relative;
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+.field input {
+    padding: 10px;
+    height: 100%;
+    background: whitesmoke;
+    border-bottom: none;
+    outline: none;
+    font-size: 16px;
+    font-family: 'poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.field span {    
+    /**color: black;
+    line-height: 30px;
+    width: 40px;**/
+    padding-left: 330px;
+    color: black;
+    bottom: -1px;
+    width: 20px;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    line-height: 20%;
+    -webkit-box-align: center;
+    position: absolute;
+    content: "\e008";
+    font-family: 'Glyphicons Halflings';
+    pointer-events: none;
+
+}

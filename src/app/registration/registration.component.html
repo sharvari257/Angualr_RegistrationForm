@@ -1,0 +1,80 @@
+
+<div class=bg-img></div>
+<div class="login col-lg-4 m-auto " *ngIf="invalidRegister">{{ errorMessage }}</div>
+<div class="signup-box">
+  
+<form *ngIf="demoForm" [formGroup]="demoForm" (ngSubmit)="postdata()" id='register' class='input-group-register' novalidate>
+     
+      <header>Create an Account</header>
+      <div class="box">
+      <h3>And start learning with AN</h3>
+      <div class="form-group">
+        
+        <div class="field space">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <input type="text"
+        formControlName="FirstName" class="form-control" placeholder="  FirstName">
+        <span class="error" *ngIf="FirstName?.invalid && FirstName?.touched" ></span>
+        </div>
+      </div>
+  <br>
+      <div class="form-group">
+    
+        <div class="field space">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        <input type="text"
+        formControlName="LastName" class="form-control" placeholder="  LastName">
+        <span class="error" *ngIf="LastName?.invalid && LastName?.touched"></span>
+      </div>
+      </div>
+      <br>
+    <div class="form-group">
+      
+      <div class="field space">
+        <span class="glyphicon glyphicon-envelope"></span>
+      <input type="email"
+      formControlName="email" class="form-control" placeholder="  Email">
+      <span class="error" *ngIf="email?.invalid && email?.touched"></span>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <div class="field space">
+       <span class="glyphicon glyphicon-lock"></span>
+      <input type="password"
+      formControlName="password" class="form-control" placeholder="  Password">
+      <span class="error" *ngIf="password?.invalid && password?.touched"></span>
+      </div>
+    </div>
+    <!--
+    <div class="form-group">
+      <label>Confirm Password</label>
+      <input type="password" formControlName="password" class="form-control">
+      </div>
+      -->
+    </div>  
+      <br>
+    <input id="check" type='checkbox'class='check-box'><span>I agree to the terms and conditions    </span>   
+        <button type='submit'class='btn btn-primary btn-lg' onchange="demoForm.getElementByID('check').disabled=!this.checked" [disabled]='!demoForm.valid'>SignUp </button>
+        <!--<button class="btn btn-danger btn-lg" type="reset" (click)="onReset()"> Cancel </button>-->
+
+        <br>
+        <br>
+        
+        <h3>Already a member? <a routerLink="/forms">Click Here</a> </h3>
+        <br>
+      
+      <div *ngIf= "alert" class="alert alert-success alert-dismissible fade show" href="/forms" role="alert" >
+        <strong>
+           Congratulations!! </strong> User registered Successfully. 
+      <!--  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>-->
+      </div> 
+    
+
+       
+      </form>
+    
+      
+   <router-outlet></router-outlet>

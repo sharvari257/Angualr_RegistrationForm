@@ -1,0 +1,96 @@
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+<div class=bg-img></div>
+  <div class="login-box">
+<form *ngIf="demoForm" [formGroup]="demoForm" (ngSubmit)="postdata()" novalidate>
+  <div class="logo" ></div>
+  
+
+      <header>Sign in to continue</header>
+    <div class="form-group">
+     <!-- <label for="UserName">UserName</label>-->
+      <div class="textbox">
+        <div class="field space">
+        <span class="glyphicon glyphicon-user"> </span>
+      <input type="UserName" id="username" 
+      formControlName="UserName" class="form-control" required placeholder="  UserName or email"/>
+     <span class="error" *ngIf="UserName?.invalid && UserName?.touched"></span> 
+      </div>
+
+    </div>
+  </div>
+
+    <div class="form-group">
+     <!--<label>Password</label>-->
+      <div class="textbox">
+        <div class="field space">
+        <span class="glyphicon glyphicon-lock"></span>
+      <input type="password"
+      formControlName="password" class="form-control" placeholder="  Password"/>
+      <!--<span class="error" *ngIf="password?.invalid && password?.touched"></span>-->
+      </div>
+    </div>
+  </div>
+  <br>
+  
+  <br>
+  <button type='submit' value="submit" class='btn btn-primary btn-lg'>Signin</button>
+  <br>
+  <br>
+  <h2><input type='checkbox'class='check-box' ><span style="color: whitesmoke;"> Remember me </span></h2>
+  
+    <br>
+    <br>
+ 
+  <!--Registration Form
+  
+<form id='register' class='input-group-register'>
+  <fieldset>
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" 
+      formControlName="firstName" class="form-control">
+      <span class="error" *ngIf="firstName?.invalid && firstName?.touched" >field is compulsary</span>
+    </div>
+
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text"
+      formControlName="LastName" class="form-control">
+      <span class="error" *ngIf="LastName?.invalid && LastName?.touched">field is compulsary</span>
+    </div>
+  </fieldset>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email"
+    formControlName="email" class="form-control">
+    <span class="error" *ngIf="email?.invalid && email?.touched">field is compulsary</span>
+  </div>
+
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password"
+    formControlName="password" class="form-control">
+    <span class="error" *ngIf="password?.invalid && password?.touched">Invalid Password</span>
+  </div>
+  <div class="form-group">
+    <label>Confirm Password</label>
+    <input type="Cpassword" formControlName="Cpassword" class="form-control">
+
+  </div>
+  <input type='checkbox'class='check-box'><span>I agree to the terms and conditions    </span>   
+      <button type='submit'class='submit-btn btn-primary'>Register</button>
+      -->
+      
+          <h3 style="color: whitesmoke;">Don't have a account?         
+            <a style="font-weight: bolder;" routerLink="/register"><h2>SignUp Here</h2></a>
+          <!-- <button id="new" class="btn btn-primary" (click)="go()">click</button> -->
+          </h3>
+
+           
+        
+          
+  </form> </div>  
+
+ 
+  <router-outlet></router-outlet>
